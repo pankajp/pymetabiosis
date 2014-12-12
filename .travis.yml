@@ -1,0 +1,11 @@
+language: python
+python:
+  - "pypy"
+before_install:
+  - sudo apt-get update
+install:
+  - pip install -r requirements.txt
+  - export PYTHON_EMBED=/usr
+  - python setup.py develop
+script:
+  - python -m pytest
